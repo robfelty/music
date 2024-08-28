@@ -8,3 +8,4 @@ In particular, I have some settings suitable for writing marching drumming music
 
 I also re-created the style of Carmine Appice's famous book "Realistic Rock", which uses a three line staff, which makes reading drumset music much simpler. 
 
+The experiments folder contains work-in-progress files, things that I tried out with Lilypond which I did not get to work as desired yet. 
