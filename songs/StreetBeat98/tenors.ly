@@ -1,9 +1,9 @@
 \version "2.24.0"
 	\drummode {
 		\stemUp
-		one16 \repeat unfold 3 { sn16:32 } sn4 one16^> two16 three16 four16 one16 one16 one8
+		one16^> \repeat unfold 3 { one16:32 } one4^> one16^> two16 three16 four16 one16 one16 one8
 		one16^> four8^> four16^> r16  four16^> one8^> r2
-		one16 \repeat unfold 3 { sn16:32 } sn4 one16^> two16 three16 four16 three16 two16 one16 two16 three16 four16 three16 two16 one4 r2
+		one16 \repeat unfold 3 { one16:32 } one4 one16^> two16 three16 four16 three16 two16 one16 two16 three16 four16 three16 two16 one4 r2
 		% bar 5
 		r1
 		r1

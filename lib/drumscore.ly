@@ -1,5 +1,6 @@
 
-#(set-default-paper-size "a4" 'landscape)
+%#(set-default-paper-size "a4" 'landscape)
+#(set-default-paper-size "a4" )
 \paper {
 	indent = 0
 	top-margin = 2\cm

@@ -6,17 +6,11 @@
 		sn16^> \repeat unfold 3 { sn16:32  } sn4^> \snr16^> \snl8^> \snl16^> \snr8^>  \rflam16 \snr16
 		\snl16 \rflam16 \snr16 \snl16 \snr8 \buzz sn8_L \snr8 stickshot8_"R" rimshot4^^_"R"
 		 % bar 5
-		r8 \buzz sn8_"R" rimclick8_L  sn16 sn16 r16 rimclick8 sn16 rimclick8 sn8
-		r8 \buzz sn8_"R" rimclick8_"L" sn8 r4 rimclick4
-  \set countPercentRepeats = ##t
-  \doublePercentWithCount 1*2 2
+		\repeat percent 5 { r8 \buzz sn8_"R" rimclick8_L  sn16 sn16 r16 rimclick8 sn16 rimclick8 sn8
+		r8 \buzz sn8_"R" rimclick8_"L" sn8 r4 rimclick4 }
 		 % bar 9
-  \doublePercentWithCount 1*2 2
 		r8 \buzz sn8_"R" rimclick8_L  sn16 sn16 r16 rimclick8 sn16 rimclick8 sn8
 		r8 \buzz sn8_"R" rimclick16_"L" \snr16 \snr16 rimclick16_"L" \snr8 rimclick8_"L" rimshot4_"R"
-		 % bar 13
-  \doublePercentWithCount 1*2 2
-  \doublePercentWithCount 1*2 2
 		 % bar 17
 		r8 \buzz sn8_"R" rimclick8_L  sn16 sn16 r16 rimclick8 sn16 rimclick8 sn8
 		r8 \buzz sn8_"R" rimclick8_"L" sn8 sn16 sn8. rimshot4

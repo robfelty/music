@@ -37,8 +37,7 @@ global = {
 }
 
 \include "../../lib/drumscore.ly"
-
-\score { %Start of Movement
+thescore = 
  \new StaffGroup <<
 	 % this makes it so that adding flams doesn't adjust the spacing between notes
 	\override Score.SpacingSpanner.strict-note-spacing = ##t
@@ -55,6 +54,7 @@ global = {
 		% we set the beam positions to be fixed so that they are horizontal, and not sloped
 		\override Beam.positions = #'(4 . 4)
 		\set DrumStaff.drumStyleTable = #(alist->hash-table snareConfig)
+		\set DrumStaff.drumPitchTable = #(alist->hash-table midiDrumPitches)
 		\global 
 		\include "snare.ly"
 	}
@@ -70,6 +70,7 @@ global = {
 		\override StemTremolo.beam-width = #1.5
 		\override Beam.positions = #'(5 . 5)
 		\set DrumStaff.drumStyleTable = #(alist->hash-table tenorConfig)
+		\set DrumStaff.drumPitchTable = #(alist->hash-table midiDrumPitches)
 		\global 
 		\include "tenors.ly"
 	>>
@@ -78,6 +79,7 @@ global = {
 		\set Staff.instrumentName = "Bass"
 		\set Staff.shortInstrumentName = "Bass"
 		\set DrumStaff.drumStyleTable = #(alist->hash-table bassConfig)
+		\set DrumStaff.drumPitchTable = #(alist->hash-table midiDrumPitches)
 		\new DrumVoice {
 			\voiceOne
 			% we use this silent voice just to force line breaks every 4 bars
@@ -109,4 +111,12 @@ global = {
 			}
 		>>
 >>
+\score { %Start of Movement
+\thescore
+}
+\include "articulate.ly"
+\score {
+	\unfoldRepeats
+	\thescore
+	\midi {}
 }

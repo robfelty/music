@@ -5,6 +5,7 @@
 		%\consists "Drum_notes_engraver" TODO makes double heads -ugly
 		%\consists "Dynamic_engraver" TODO dynamics are placed on the staff instead of under
 		\consists "Rest_engraver"
+		\consists "Midi_control_change_performer"
 		\consists "Percent_repeat_engraver"
 		\consists "Tuplet_engraver"
 		\consists "Note_heads_engraver"
@@ -77,7 +78,7 @@ buzzSymbol = \markup \path #0.25
 applyBuzzSymbol = #(grob-transformer 'stencil
   (lambda (grob orig)
    (let* ((yex (ly:stencil-extent orig Y))
-          (ypos (interval-index yex CENTER))
+          (ypos (interval-index yex CENTER ))
           (sten (grob-interpret-markup grob buzzSymbol)))
     (ly:stencil-add orig
      (ly:stencil-translate-axis sten ypos Y)))))
@@ -108,39 +109,55 @@ stopSlashedGraceMusic = {
 }
 
 #(define snareConfig '(
-         (bassdrum        default   #f           5)
+         (claves        default   #f           5)
          (snare           default   #f           1)
+         (buzz           default   #f           1)
          (hihat           cross     #f           2)
-         (halfopenhihat   cross     #f     -1)
-         (pedalhihat      xcircle   #f      1)
-         (lowtom          xcircle   #f      3)))
+         (backstick   cross     #f     -1)
+         (losidestick      xcircle   #f      1)
+         (hisidestick          xcircle   #f      3)))
 #(define tenorConfig '(
-         (bassdrum        default   #f           5)
-         (snare           default   #f           3)
-         (hihat           default     #f           1)
-         (halfopenhihat   default     #f     -1)
-         (pedalhihat      default   #f      -3)
-         (lowtom          default   #f      -5)))
+         (spock        default   #f           5)
+         (one           default   #f           3)
+         (two           default     #f           1)
+         (three   default     #f     -1)
+         (four   default     #f     -3)
+         (hightom        default   #f           5)
+         (himidtom           default   #f           3)
+         (lowmidtown           default     #f           1)
+         (lowtom   default     #f     -1)
+         (highfloortom   default     #f     -1)
+         (lowfloortom      default   #f      -3)))
 #(define bassConfig '(
-         (bassdrum        cross   #f           4)
-         (snare           default   #f           3)
-         (hihat           default     #f           1)
-         (halfopenhihat   default     #f     -1)
-         (pedalhihat      default   #f      -3)
-         (lowtom          default   #f      -5)))
+         (oneb           default   #f           3)
+         (twob           default     #f           1)
+         (threeb   default     #f     -1)
+         (bassdrum   default     #f     -3)))
 titledPiece = {}
 AutoBarline = {}
 AutoEndMovementBarline = \bar "|."
-drumPitchNames.spock = #'bassdrum
-drumPitchNames.one = #'snare
-drumPitchNames.two = #'hihat
-drumPitchNames.three = #'halfopenhihat
-drumPitchNames.four = #'pedalhihat
-drumPitchNames.click = #'bassdrum
+drumPitchNames.spock = #'spock
+drumPitchNames.one = #'one
+drumPitchNames.two = #'two
+drumPitchNames.three = #'three
+drumPitchNames.four = #'four
+drumPitchNames.oneb = #'oneb
+drumPitchNames.twob = #'twob
+drumPitchNames.threeb = #'threeb
+drumPitchNames.fourb = #'bassdrum
+drumPitchNames.click = #'claves
 drumPitchNames.stickshot = #'hihat
-drumPitchNames.rimshot = #'lowtom
-drumPitchNames.rimclick = #'pedalhihat
-drumPitchNames.backstick = #'halfopenhihat
+drumPitchNames.rimshot = #'hisidestick
+drumPitchNames.rimclick = #'losidestick
+drumPitchNames.backstick = #'backstick
+drumPitchNames.buzz = #'buzz
+midiDrumPitches.spock = e'
+midiDrumPitches.one = a
+midiDrumPitches.two = a
+midiDrumPitches.three = d
+midiDrumPitches.four = d
+midiDrumPitches.snare = e
+midiDrumPitches.buzz = c
 
 
 arrow = #(define-music-function (mymarkup) (markup?)
