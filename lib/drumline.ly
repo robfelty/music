@@ -115,7 +115,7 @@ stopSlashedGraceMusic = {
          (hihat           cross     #f           2)
          (backstick   cross     #f     -1)
          (losidestick      xcircle   #f      1)
-         (hisidestick          xcircle   #f      3)))
+         (rimshot          xcircle   #f      3)))
 #(define tenorConfig '(
          (spock        default   #f           5)
          (one           default   #f           3)
@@ -132,6 +132,7 @@ stopSlashedGraceMusic = {
          (oneb           default   #f           3)
          (twob           default     #f           1)
          (threeb   default     #f     -1)
+         (fourb   default     #f     -3)
          (bassdrum   default     #f     -3)))
 titledPiece = {}
 AutoBarline = {}
@@ -144,20 +145,31 @@ drumPitchNames.four = #'four
 drumPitchNames.oneb = #'oneb
 drumPitchNames.twob = #'twob
 drumPitchNames.threeb = #'threeb
-drumPitchNames.fourb = #'bassdrum
+drumPitchNames.fourb = #'fourb
 drumPitchNames.click = #'claves
 drumPitchNames.stickshot = #'hihat
-drumPitchNames.rimshot = #'hisidestick
+drumPitchNames.rimshot = #'rimshot
 drumPitchNames.rimclick = #'losidestick
 drumPitchNames.backstick = #'backstick
 drumPitchNames.buzz = #'buzz
+% tenor midi sounds for use with Drumline Originals plugin
 midiDrumPitches.spock = e'
 midiDrumPitches.one = a
 midiDrumPitches.two = a
 midiDrumPitches.three = d
 midiDrumPitches.four = d
+% snare midi sounds for use with Drumline Originals plugin
 midiDrumPitches.snare = e
+midiDrumPitches.rimshot = f
+midiDrumPitches.crossstick = b
+midiDrumPitches.stickshot = c'
 midiDrumPitches.buzz = c
+% bass drum midi sounds for use with Drumline Originals plugin
+midiDrumPitches.oneb = e
+midiDrumPitches.twob = b,
+midiDrumPitches.threeb = g,
+midiDrumPitches.fourb = e,
+midiDrumPitches.fiveb = c,
 
 
 arrow = #(define-music-function (mymarkup) (markup?)
