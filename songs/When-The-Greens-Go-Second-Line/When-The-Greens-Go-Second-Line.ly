@@ -36,7 +36,7 @@ global = {
 	}
 }
 marks = {
-  \key f \major
+  \key bes \major
   
   \tempo 4 = 110 
   \time 4/4 
@@ -48,43 +48,7 @@ marks = {
 	\repeat unfold 8 { s1 }
 	\mark \default
 }
-
-melody = {
-  r4 f4 a4 bes4 
-	c'1 
-  r4 f4 a4 bes4 
-	c'1 
-  r4 f4 a4 bes4 
-  c'2 a2 
-	f2 a2 
-	g1 
-	r2 a4 g4 
-	f2. f4
-	a2 c'2
-	c'4 bes4~bes2
-	r4 bes4 a4 bes4
-	c'2 a2
-	f2 g2 
-	f2 r2
-}
-secondLine = {
-  r8 f8 a8 bes8 
-	c'2 
-  r8 f8 a8 bes8 
-	c'2 
-  r8 f8 a8 bes8 
-  c'4 a4 
-	f4 a4 
-	g2 
-	r4 a8 g8 
-	f4. f8
-	a4 c'4
-	c'8 bes8~bes4
-	r8 bes8 a8 bes8
-	c'4 a4
-	f4 g4 
-	f2 r2
-}
+\include "melody.ly"
 drumbreakHorns = {
 	\override MultiMeasureRest.expand-limit = #2
 	r1 
@@ -109,18 +73,13 @@ drumbreakHorns = {
  			\set Staff.shortInstrumentName = "Tpt."
 			\set Staff.midiInstrument = "trumpet"
 			\context Voice = voiceA {
-			\transpose f g {
+			\transpose bes c {
 				\marks
 			}
 		}
 		\context Voice = voiceB {
 			\tag #'printOnly { 
-				\transpose f g' {
-					\trumpetMelody
-				}
-			}
-			\tag #'midiOnly { 
-				\transpose f g'' {
+				\transpose bes c'' {
 					\trumpetMelody
 				}
 			}
@@ -131,11 +90,11 @@ drumbreakHorns = {
  			\set Staff.shortInstrumentName = "Alt."
 			\set Staff.midiInstrument = "alto sax"
 			\context Voice = voiceA 
-			\transpose f d {
+			\transpose bes g {
 				\marks
 			}
 			\context Voice = voiceC {
-				\transpose f d' {
+				\transpose bes g'' {
 				\altoMelody
 			}
 		}
@@ -208,20 +167,20 @@ drumbreakHorns = {
   <<
  		\new Staff = "TrumpetMelody" <<
 			\set Staff.midiInstrument = "trumpet"
-			\transpose f f' {
+			\transpose bes bes' {
 				\trumpetMelody
 			}
  		>>
  		\new Staff = "AltoMelody" <<
 			\set Staff.midiInstrument = "alto sax"
-			\transpose f f' {
+			\transpose bes bes' {
 				\altoMelody
 			}
  		>>
  		\new Staff = "TromboneMelody" <<
  			\clef bass
 			\set Staff.midiInstrument = "trombone"
- 			\tromboneMelody
+			\tromboneMelody
  		>>
 	\new DrumStaff = "Snare" <<
 		\set Staff.instrumentName = "Snare"

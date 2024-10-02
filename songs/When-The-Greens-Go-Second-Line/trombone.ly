@@ -7,17 +7,9 @@ tromboneMelody =
 		\tag #'midiOnly { 
 			\p
 		}
-		\melody
+		\melodybes
 		\drumbreakHorns
-		\secondLine
-		\drumbreakHorns
-		\tag #'printOnly { 
-			\mp
-		}
-		\tag #'midiOnly { 
-			\pp
-		}
-		\secondLine
+		\secondLinebes
 		\drumbreakHorns
 		\tag #'printOnly { 
 			\mp
@@ -25,7 +17,15 @@ tromboneMelody =
 		\tag #'midiOnly { 
 			\pp
 		}
-		\secondLine
+		\secondLinebes
+		\drumbreakHorns
+		\tag #'printOnly { 
+			\mp
+		}
+		\tag #'midiOnly { 
+			\pp
+		}
+		\secondLinebes
 		\drumbreakHorns
 		\f
 		r2

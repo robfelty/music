@@ -15,9 +15,9 @@ altoMelody = {
 	\tag #'midiOnly { 
 		\p
 	}
-	\melody
+	\melodybes
 	\drumbreakHorns
-	\secondLine
+	\secondLinebes
 	\drumbreakHorns
 	% trumpet solo
 	\tag #'printOnly { 
@@ -26,7 +26,7 @@ altoMelody = {
 	\tag #'midiOnly { 
 		\pp
 	}
-	\secondLine
+	\secondLinebes
 	\drumbreakHorns
 	\f
 	% alto solo
@@ -48,5 +48,5 @@ altoMelody = {
 		\pp
 	}
 	% trombone solo
-	\secondLine
+	\secondLinebes
 }

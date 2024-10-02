@@ -3,9 +3,9 @@ trumpetMelody = {
 	\tag #'midiOnly { 
 		\p
 	}
-	\melody
+	\melodyfifth
 	\drumbreakHorns
-	\secondLine
+	\secondLinefifth
 	\drumbreakHorns
 	\f
 	% trumpet solo
@@ -13,7 +13,7 @@ trumpetMelody = {
 		r2
 		r8 f8~f8 c8 f4\staccato r4
 		r8 f8~f8 c8 f4\staccato r4
-		r8 f8\staccato r8 e8\staccato r8 d8\staccato r8 c8\staccato
+		r8 f8\staccato r8 es8\staccato r8 d8\staccato r8 c8\staccato
 		r8 g8 a8 bes8 c8\staccato r8 r4
 	}
 	\relative c {
@@ -30,7 +30,7 @@ trumpetMelody = {
 		\pp
 	}
 	% alto solo
-	\secondLine
+	\secondLinefifth
 	\drumbreakHorns
 	\tag #'printOnly { 
 		\mp
@@ -39,5 +39,5 @@ trumpetMelody = {
 		\pp
 	}
 	% trombone solo
-	\secondLine
+	\secondLinefifth
 }
